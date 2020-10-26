@@ -11,6 +11,14 @@ void display(struct Node *p){
 		cout<<p->data<<" ";
 		p = p->next;
 	}
+	cout<<'\n';
+}
+void displayRecursive(struct Node *p){
+	if(p!=NULL){
+		cout<<p->data<<" ";
+		displayRecursive(p->next);
+		
+	}
 }
 void create(int A[], int n){
 	int i;
@@ -34,4 +42,5 @@ int main(){
 	int A[] = {3,5,7,10,15};
 	create(A,5);
 	display(first);
+	displayRecursive(first);
 }
