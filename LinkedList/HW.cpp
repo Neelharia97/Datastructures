@@ -42,9 +42,8 @@ public:
     void addStart(const int v) { //O(1)
         head = new Node(v, head); //Need to be created with new, so it doesn't go out  of scope and destructed
         len += 1;
-        head  = 
         head ->data=v;
-
+        head ->next = 
     }
     // will add to min(length, i)
     void insert(const int i, const int v) { //O(n)

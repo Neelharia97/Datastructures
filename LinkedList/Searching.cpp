@@ -56,7 +56,7 @@ void create(int A[], int n){
 	int i;
 	struct Node *t, *last;
 	first = new Node;
-	first->data = A[0];
+	first->data = A[0]; 
 	first->next = NULL;
 	last = first;	
 
