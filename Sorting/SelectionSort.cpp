@@ -25,7 +25,7 @@ void selectionSort(int a[], int n){
 
 int main(){
 	int i;
-	int n = 100000;
+	int n = 100 000;
 	int a[n];
 	for(i = 0; i<n ; i++){
 		a[i] = rand()%n;
