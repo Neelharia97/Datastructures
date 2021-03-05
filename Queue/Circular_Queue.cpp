@@ -30,12 +30,13 @@ void enqueue(struct Queue *q, int x){
 
 int dequeue(struct Queue *q){
     int x = -1;
-    if((q->rear+1)%q->size == q->front){
+    if(q->rear == q->front){
         cout<<"Queue Empty";
         cout<<'\n';
     }
     else{
-        q->front = (q->front  +1)%q->size;
+        q->front = (q->front+1)%q->size;
+      //  cout<<q->front;
         x = q->Q[q->front];
     }
     return x;
@@ -58,8 +59,11 @@ int main(){
     enqueue(&q,20);
     enqueue(&q,30);
     enqueue(&q,40);
+    //enqueue(&q,40);
+    //enqueue(&q,40);
 
-  //  dequeue(&q);
+    dequeue(&q);
+    dequeue(&q);
    // dequeue(&q);
     //enqueue(&q,100);
     display(q);
