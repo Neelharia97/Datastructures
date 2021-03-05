@@ -33,6 +33,7 @@ public:
     		cout<<n->data<<" ";
     		n = n->next;
     	}
+        cout<<"\n\n";
     }
 
 
@@ -169,18 +170,35 @@ public:
 
 int main() {
     LinkedList a;
-    const int n = 100;
+    const int n = 1000;
     // For homework, use this main and implement a linkedlist with head and tail.
     //one of these operations is O(n). You may make that loop < 1000
-    for (int i = 0; i < n; i++)
-   		a.addStart(5);
+    for (int i = 0; i < n; i++){
+   		a.addStart(i);
+    }
+    cout<<"Length: "<<a.getLength()<<'\n';
    	a.display(a.get());
-    for (int i = 0; i < n; i++)
+
+    for (int i = 0; i < n; i++){
       a.addEnd(i);
-    for (int i = 0; i < n; i++)
+    }
+   cout<<"Length: "<<a.getLength()<<'\n';
+    a.display(a.get());
+
+
+    for (int i = 0; i < n; i++){
         a.removeStart();
-    for (int i = 0; i < n; i++)
+    }
+   cout<<"Length: "<<a.getLength()<<'\n';
+    a.display(a.get());
+
+
+
+    for (int i = 0; i < n/2; i++){
         a.removeEnd();
+    }
+   cout<<"Length: "<<a.getLength()<<'\n';
+    a.display(a.get());
 #if 0
     //REALLY BAD. Don't do this
     for (int i = 0; i < a.getLength(); i++)

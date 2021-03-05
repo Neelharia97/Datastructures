@@ -36,7 +36,7 @@ int Delete(int A[],int n)
  return val;
 }
 int main() {
- int H[]={10,14,15,5,20,30,8,40};
+ int H[]={8, 10, 9 ,11};
  int i;
  for(i=1;i<=7;i++)
  Insert(H,i);

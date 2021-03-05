@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-
+/*
 void insert(int a[], int n){
 	for(int i = 1;i<n;i++){
 		int j = i-1;
@@ -32,4 +32,28 @@ int main(){
 	}
 	cout<<'\n';
 
+}
+
+#include <string>
+#include<iostream>
+*/
+string solution(string& s) {
+  char c = s[0];
+ int a = int(c);
+ // cout<<a;
+  if(65<=a<=90)   // please fix condition
+    return "upper";
+  else if(97<=a<=122)  // please fix condition
+    return "lower";
+  
+ else if(48<=a<=57)  // please fix condition
+    return "digit";
+  else
+    return "other";
+  
+}
+
+int main(){
+	string s = "a";
+    cout<<solution(s);
 }
