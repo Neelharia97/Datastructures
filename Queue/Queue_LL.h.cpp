@@ -1,3 +1,6 @@
+#ifndef Queue_LL_h
+#define Queue_LL_h
+
 #include<iostream>
 using namespace std;
 
