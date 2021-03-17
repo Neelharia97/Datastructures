@@ -1,4 +1,4 @@
-# Datastructures
+# Datastructures & Algorithms
 This repository contains all the data structures I have learned and my implementation of the same. I have used C++ to implement these. My main source of learning data structures has
 been Udemy, YouTube, and the internet itself. Please, feel free to shoot me any questions regarding the same. To make it simpler for the viewer, I have mentioned all the data structures I have 
 implemented in the contents section below. I have also made separate folders for easier access.
