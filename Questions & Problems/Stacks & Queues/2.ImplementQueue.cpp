@@ -1,4 +1,3 @@
-
 #include<iostream>
 using namespace std;
 
@@ -7,11 +6,21 @@ struct Node{
     Node *next;
 }*front = NULL, *rear = NULL;
 
+void display(){
+    Node *a;
+    a = front;
+    while(a!=NULL){
+        cout<<a->data<<" ";
+        a = a->next;
+    }
+    cout<<endl;
+}
+
 void enqueue(int x){
     struct Node *t;
     t = new Node;
-    if(t == NULL){
-        cout<<"Full Queue";
+    if(t==NULL){
+        cout<<"Queue Full";
     }
     else{
         t->data = x;
@@ -27,45 +36,25 @@ void enqueue(int x){
 
 int dequeue(){
     int x = -1;
-    struct Node *t;
-    if (front == NULL){
+    struct Node *p;
+    if(front == NULL){
         cout<<"Queue is Empty";
     }
     else{
-        t = front;
-        x = front->data;
+        p = front;
+        x = p->data;
         front = front->next;
-        free(t);
+        free(p);
     }
     return x;
 }
 
-void display(){
-    struct Node *p;
-    p = front;
-    while(p){
-        cout<<p->data; 
-        cout<<'\n';
-        p = p->next;
-    }
-}
-
 int main(){
-    
-
     enqueue(10);
-    enqueue(20);
-    // enqueue(30);
-    // enqueue(40);
+//     enqueue(20);
+//     enqueue(30);
+//    enqueue(40);
     // enqueue(50);
-    // enqueue(60);
 
-    cout<<"Enqueue"<<'\n';
-    display();
-    
-    dequeue();
-    dequeue();
-    dequeue();
-    cout<<"Dequeue"<<'\n';
     display();
 }
