@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-void funB(int a); 
+void funB(int a);  
 
 void funA(int a){
     if(a>0){
