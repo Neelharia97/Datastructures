@@ -1,39 +1,20 @@
+// 
+#include<string>
 #include<iostream>
+#include<map>
 using namespace std;
 
-struct Node{
-    int data;
-    struct Node* next;
-}*first = NULL;
-
-void display(struct Node *p){
-    while(p){
-        cout<<p->data<<" ";
-        p = p->next;
+void mapper(int l, int r){
+    for(int i = l; i<r; i++){
+        string a = to_string(i);
+        map<string, int> m;
+        for(int j = 0; j<a.length(); j++){
+            if(m[a[j]]){
+                m[a[j]] += 1;
+            }
+            else{
+                m[a[j]] = 1;
+            }
+        }
     }
-    cout<<'\n';
-}
-
-void create(int a[], int n){
-    struct Node* t, *last;
-    first = new Node;
-    first->data = a[0];
-    first->next = NULL;
-    last = first;
-
-    for(int i = 1; i<n; i++){
-        t = new Node;
-        t->data = a[i];
-        t->next = NULL;
-        last->next = t;
-        last = t;
-    }
-}
-
-int main(){
-    int a[] ={1,2,3,4,5,6};
-    int size = sizeof(a)/sizeof(a[0]);
-    create(a, size);
-    display(first);
-
 }
