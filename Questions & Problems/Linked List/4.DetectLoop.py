@@ -22,7 +22,7 @@ class LinkedList:
                 return True
             else:
                 return False
-
+9137747811
 
     def detectLoop(self):
         slow = self.head

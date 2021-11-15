@@ -1,19 +1,16 @@
-def findPair(arr, target):
+def find_pair(arr, target):
+    i = 0
+    j = 1
     arr = sorted(arr)
-    i,j = 0, 1
-    while(i<len(arr) and j<len(arr)):
-        sum_ = abs(arr[i]-arr[j])
-        print(sum_)
-        if sum_ == target:
-            return(arr[i], arr[j])
-            
-        if sum_<target:
-            j+=1
-        else:
+    while(i<len(arr)-1 and j<len(arr)-5
+    ):
+        if arr[j]-arr[i] == target:
+            return (arr[i], arr[j])
+        if arr[j]-arr[i]<target:
+            j += 1
+        if arr[j]-arr[i]>target:
             i += 1
-    return -1    
-
-if __name__ == "__main__":
-    arr = [1, 8, 30, 40, 100]
-    target = 60
-    print(findPair(arr, target))
+    return False
+arr = [90, 70, 20, 80, 50]
+k = 45
+print(find_pair(arr, k))

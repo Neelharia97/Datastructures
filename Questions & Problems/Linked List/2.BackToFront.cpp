@@ -4,7 +4,7 @@ using namespace std;
 struct Node{
     int data;
     struct Node* next;
-}*top = NULL, *last = NULL;
+}*first = NULL, *last = NULL;
 
 void display(){
     struct Node *p;
@@ -14,6 +14,9 @@ void display(){
         p = p->next;
     }
     cout<<'\n';
+}
+void Back2Front(){
+    
 }
 
 void create(int a[], int size){
@@ -31,4 +34,12 @@ void create(int a[], int size){
         last =t;
         
     }
+}
+
+
+int main(){
+    int arr[] = {1,2,3,4,5,6};
+    int size = sizeof(arr)/sizeof(arr[0]);
+    create(arr, size);
+    Back2Front();
 }

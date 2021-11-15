@@ -28,7 +28,7 @@ string mapping(string s[],int size){
             final += m[d];
         }
         toString[i] = final;
-    }
+    } 
     display(toString,size);
     // for(int j = 0; j<s[i].length();j++){
     //     cout<<s[j]<<endl;
