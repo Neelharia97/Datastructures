@@ -1,1 +1,1 @@
-    # leftView(tree)
+    tree.right.left =  Node(8)
